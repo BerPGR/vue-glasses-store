@@ -8,6 +8,12 @@
         </div>
         <img :style="{ cursor: 'pointer'}" src="../assets//shopping-bag.svg" class="cart-image" alt="">
     </nav>
+    <div class="bg-image">
+        <img src="../assets/heroBG.jpg" :style="{ objectFit: 'cover', width: '100%' }" alt="">
+        <h1 class="first-text" :style="{ color: colors.white }">Vista o Mundo <br/>com Estilo!</h1>
+        <h1 class="secondt-text" :style="{ color: colors.white }">Veja e Seja Visto <br/>com Nossos <br/>Óculos Exclusivos!</h1>
+    </div>
+    <div :style="{ backgroundColor: colors.black, width: '100%', height: '2px', marginTop: '60px'}"></div>
   </div>
 </template>
 
@@ -38,11 +44,29 @@ export default {
     align-items: center;
 }
 
+.toggle-sidebar {
+    cursor: pointer;
+}
+
 .titulo {
     margin-left: 20px;
 }
 
-.toggle-sidebar {
-    cursor: pointer;
+.bg-image {
+    position: relative;
+}
+
+.first-text {
+    position: absolute;
+    top: 20%;
+    left: 9%;
+    font-size: 48px;
+}
+
+.secondt-text {
+    position: absolute;
+    right: 8%;
+    bottom: 10%;
+    font-size: 48px;
 }
 </style>
