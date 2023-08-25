@@ -5,11 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    carrinho: []
+    carrinho: 0
   },
   getters: {
+    getQtdItems(state) {
+      return state.carrinho
+    }
   },
   mutations: {
+    addCarrinho(state) {
+      state.carrinho += 1
+    }
   },
   actions: {
   },

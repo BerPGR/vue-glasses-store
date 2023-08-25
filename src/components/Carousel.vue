@@ -17,6 +17,7 @@
 import colors from '@/assets/colors/colors';
 
 export default {
+    name: 'CarouselAbout',
     data() {
         return {
             colors: colors,
@@ -50,7 +51,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 95%;
+    width: 85%;
     padding: 50px 0
 }
 

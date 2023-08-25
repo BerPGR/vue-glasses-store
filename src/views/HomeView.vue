@@ -7,7 +7,12 @@
           <p class="titulo" :style="{ color: colors.vinho, fontSize: '40px', fontWeight: 'normal'}">{{ title }}</p>
           <img src="../assets/logo.png" :style="{height: '50px', marginLeft: '24px', objectFit: 'contain'}" alt="">
         </div>
-        <img :style="{ cursor: 'pointer'}" src="../assets/shopping-bag.svg" class="cart-image" alt="">
+        <div @click="testeCarrinho" >
+          <img :style="{ cursor: 'pointer'}" src="../assets/shopping-bag.svg" class="cart-image" alt="">
+          <div v-if="this.qtdItems > 0">
+            <Badge :items="this.qtdItems"/>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -43,12 +48,15 @@
 import colors from '@/assets/colors/colors'
 import HeroView from '@/components/HeroView.vue';
 import AboutUs from '@/components/AboutUs.vue';
+import Badge from '@/components/Badge.vue';
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'HomeView',
   components: {
     HeroView,
-    AboutUs
+    AboutUs,
+    Badge
   },
   data: () => ({
     colors: colors,
@@ -62,7 +70,16 @@ export default {
     },
     toggleColecoes() {
       this.isColecoesClosed = !this.isColecoesClosed
+    },
+    testeCarrinho() {
+      this.$store.commit('addCarrinho')
+      console.log(this.qtdItems)
     }
+  },
+  computed: {
+    ...mapGetters({
+      qtdItems: 'getQtdItems'
+    })
   }
 }
 </script>
