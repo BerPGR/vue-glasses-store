@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home" :style="{ backgroundColor: colors.white }">
+    <HeroView />
   </div>
 </template>
 
 <script>
+import colors from '@/assets/colors/colors'
+import HeroView from '@/components/HeroView.vue';
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    HeroView,
+  },
+  data: () => ({
+    colors: colors
+  })
 }
 </script>
+
+<style>
+.home {
+  min-height: 100vh;
+}
+</style>
