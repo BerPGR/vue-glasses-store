@@ -1,15 +1,5 @@
 <template>
   <div class="hero-section">
-    <header>
-        <nav class="nav-superior">
-            <div class="right-side">
-                <i class="fa fa-bars fa-lg toggle-sidebar"></i>
-                <p class="titulo" :style="{ color: colors.vinho, fontSize: '40px', fontWeight: 'normal'}">{{ title }}</p>
-                <img src="../assets/logo.png" :style="{height: '50px', marginLeft: '24px', objectFit: 'contain'}" alt="">
-            </div>
-            <img :style="{ cursor: 'pointer'}" src="../assets/shopping-bag.svg" class="cart-image" alt="">
-        </nav>
-    </header>
     <div class="bg-image">
         <img src="../assets/heroBG.jpg" :style="{ objectFit: 'cover', width: '100%' }" alt="">
         <h1 class="first-text" :style="{ color: colors.white }">Vista o Mundo <br/>com Estilo!</h1>
@@ -24,7 +14,6 @@ import colors from '@/assets/colors/colors'
 export default {
     name: 'HeroComponent',
     data: () => ({
-        title: 'VisãoClara',
         colors: colors
     })
 }
@@ -32,33 +21,6 @@ export default {
 
 <style scoped>
 @import "~font-awesome/css/font-awesome.min.css";
-header {
-    position: relative;
-}
-.nav-superior {
-    height: 82px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    z-index: 99;
-    position: fixed;
-    background-color: #f1f1f1
-}
-
-.right-side {
-    display: flex;
-    align-items: center;
-}
-
-.toggle-sidebar {
-    cursor: pointer;
-}
-
-.titulo {
-    margin-left: 20px;
-}
 
 .bg-image {
     position: relative;
@@ -67,7 +29,7 @@ header {
 
 .first-text {
     position: absolute;
-    top: 20%;
+    top: 180px;
     left: 9%;
     font-size: 48px;
 }
