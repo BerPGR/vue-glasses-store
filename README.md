@@ -87,7 +87,7 @@ visao-clara/
 - HTML5 & CSS3: Markup and styling
 - Figma: Design and prototyping tool
 
-## Screenshots (Will be added soon)
+## Screenshots will be added soon
 
 ## Acknowledgments
 
