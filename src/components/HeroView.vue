@@ -31,13 +31,13 @@ export default {
     position: absolute;
     top: 180px;
     left: 9%;
-    font-size: 48px;
+    font-size: 44px;
 }
 
 .secondt-text {
     position: absolute;
     right: 8%;
     bottom: 10%;
-    font-size: 48px;
+    font-size: 44px;
 }
 </style>

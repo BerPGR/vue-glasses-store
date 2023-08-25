@@ -18,7 +18,7 @@
         <ul>
           <li>Início</li>
           <li @click="toggleColecoes">Coleções <i class="fa fa-chevron-down"></i></li>
-          <ul :class="{ openul: isColecoesOpen }">
+          <ul :class="{ openul: isColecoesClosed }">
             <li>Óculos de sol</li>
             <li>Óculos de grau</li>
             <li>Óculos blue light</li>
@@ -26,36 +26,42 @@
             <li>Óculos de leitura</li>
             <li>Óculos infantis</li>
           </ul>
-          <li>Item 3</li>
+          <li>Guia de Estilo</li>
+          <li>Novidades</li>
+          <li>Minha Conta</li>
+          <li>Sair</li>
         </ul>
       </nav>
     </div>
 
     <HeroView />
+    <AboutUs />
   </div>
 </template>
 
 <script>
 import colors from '@/assets/colors/colors'
 import HeroView from '@/components/HeroView.vue';
+import AboutUs from '@/components/AboutUs.vue';
 
 export default {
   name: 'HomeView',
   components: {
     HeroView,
+    AboutUs
   },
   data: () => ({
     colors: colors,
     title: 'VisãoClara',
     isDrawerOpen: false,
-    isColecoesOpen: false,
+    isColecoesClosed: true,
   }),
   methods: {
     toggleDrawer() {
       this.isDrawerOpen = !this.isDrawerOpen;
     },
     toggleColecoes() {
-      this.isColecoesOpen = !this.isColecoesOpen
+      this.isColecoesClosed = !this.isColecoesClosed
     }
   }
 }
@@ -135,5 +141,6 @@ nav li {
 
 .openul {
   display: none;
+  transition: bottom 0.3s ease;
 }
 </style>
