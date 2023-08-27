@@ -33,8 +33,8 @@
           </ul>
           <li>Guia de Estilo</li>
           <li>Novidades</li>
-          <li>Minha Conta</li>
-          <li>Sair</li>
+          <li><a href="https://www.linkedin.com/in/bernardomm27/">Minha Conta</a></li>
+          <li><a href="https://github.com/BerPGR">Sair</a></li>
         </ul>
       </nav>
     </div>
@@ -74,7 +74,7 @@ export default {
     testeCarrinho() {
       this.$store.commit('addCarrinho')
       console.log(this.qtdItems)
-    }
+    },
   },
   computed: {
     ...mapGetters({
@@ -86,6 +86,11 @@ export default {
 
 <style>
 @import "~font-awesome/css/font-awesome.min.css";
+
+a {
+  text-decoration: none;
+  color: #1f1f1f
+}
 
 .home {
   min-height: 100vh;
