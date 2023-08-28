@@ -1,8 +1,7 @@
 <template>
   <div class="about-container">
     <p :style="{ textAlign: 'center', fontSize: '32px'}">Sobre <br/><span :style="{color: colors.vinho, fontWeight: 'bold', fontSize: '48px'}">NÓS</span></p>
-
-   <Carousel />
+    <Carousel />
   </div>
 </template>
 

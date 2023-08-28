@@ -42,6 +42,7 @@
     <HeroView />
     <AboutUs />
     <Colections />
+    <StyleGuide />
   </div>
 </template>
 
@@ -51,6 +52,8 @@ import HeroView from '@/components/HeroView.vue';
 import AboutUs from '@/components/AboutUs.vue';
 import Badge from '@/components/subcomponents/Badge.vue';
 import Colections from '@/components/Colections.vue';
+import StyleGuide from '@/components/StyleGuide.vue';
+
 import { mapGetters } from 'vuex'
 
 export default {
@@ -59,8 +62,9 @@ export default {
     HeroView,
     AboutUs,
     Badge,
-    Colections
-  },
+    Colections,
+    StyleGuide
+},
   data: () => ({
     colors: colors,
     title: 'VisãoClara',
