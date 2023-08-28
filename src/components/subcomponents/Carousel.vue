@@ -58,7 +58,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 85%;
+    width: 90%;
     padding: 50px 0
 }
 

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Carousel from './Carousel.vue';
+import Carousel from './subcomponents/Carousel.vue';
 import colors from '@/assets/colors/colors';
 export default {
     name: 'AboutUs',
